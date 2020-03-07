@@ -90,3 +90,7 @@ route::post ('/comments/{topic}','CommentController@store')->name('comments.stor
 
 // cette route permet de définir ou l'on posté cette réponse au commentaire en fonction de son id
 Route::post('/commentReply/{comment}','CommentController@storeCommentReply')->name('comments.storeReply');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
